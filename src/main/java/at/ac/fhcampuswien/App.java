@@ -6,7 +6,26 @@ public class App {
 
     //todo Task 1
     public void largestNumber(){
-        // input your solution here
+        Scanner scanner = new Scanner(System.in);
+        float largest_number = 0;
+
+        for(int i = 1; ; i ++) {
+            System.out.print("Number " + i + ": ");
+            float number = scanner.nextFloat();
+
+            if(i == 1 && number <= 0) {
+                System.out.println("No number entered.");
+                break;
+            }
+            if(i > 1 && number > largest_number) {
+                largest_number = number;
+            }
+            else if(i > 1 && number <= 0) {
+                String result = String.format("The largest number is %,.2f", largest_number);
+                System.out.println(result);
+                break;
+            }
+        }
     }
 
     //todo Task 2
@@ -26,7 +45,6 @@ public class App {
 
     //todo Task 5
     public void marks(){
-        // input your solution here
     }
 
     //todo Task 6
